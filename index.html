@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>洪佩婷 - 個人履歷表 (Pei-Ting Hong Resume)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #1e40af;
+      --primary-light: #3b82f6;
+      --primary-dark: #1e3a8a;
+      --primary-bg: #eff6ff;
+      --text-main: #1f2937;
+      --text-muted: #4b5563;
+      --border: #e5e7eb;
+      --bg-page: #f3f4f6;
+      --bg-card: #ffffff;
+      --badge-bg: #e0e7ff;
+      --badge-text: #3730a3;
+      --success: #059669;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Noto Sans TC', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Microsoft JhengHei", sans-serif;
+      background-color: var(--bg-page);
+      color: var(--text-main);
+      line-height: 1.65;
+      padding: 24px 16px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    /* Action bar */
+    .action-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: white;
+      padding: 14px 24px;
+      border-radius: 12px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .action-title {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .btn-group {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 9px 18px;
+      font-size: 14px;
+      font-weight: 500;
+      border-radius: 8px;
+      border: 1px solid transparent;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: white;
+    }
+    .btn-primary:hover {
+      background: var(--primary-dark);
+      transform: translateY(-1px);
+    }
+
+    .btn-secondary {
+      background: #f9fafb;
+      color: var(--text-main);
+      border-color: var(--border);
+    }
+    .btn-secondary:hover {
+      background: #f3f4f6;
+    }
+
+    /* Resume Paper */
+    .resume-card {
+      background: var(--bg-card);
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      overflow: hidden;
+      border: 1px solid var(--border);
+    }
+
+    /* Header */
+    .resume-header {
+      background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+      color: white;
+      padding: 36px 40px;
+      position: relative;
+    }
+
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .name-title h1 {
+      font-size: 34px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      margin-bottom: 6px;
+    }
+
+    .name-title .tagline {
+      font-size: 16px;
+      color: #bfdbfe;
+      font-weight: 500;
+    }
+
+    .contact-list {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      font-size: 14.5px;
+      background: rgba(255, 255, 255, 0.14);
+      padding: 16px 20px;
+      border-radius: 10px;
+      backdrop-filter: blur(4px);
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: #f8fafc;
+    }
+
+    .contact-item a {
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 500;
+      border-bottom: 1px dotted rgba(255,255,255,0.6);
+    }
+    .contact-item a:hover {
+      border-bottom-style: solid;
+      color: #e0e7ff;
+    }
+
+    /* Body */
+    .resume-body {
+      padding: 36px 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+    }
+
+    /* Section */
+    .section {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid #e2e8f0;
+      position: relative;
+    }
+
+    .section-header::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 48px;
+      height: 2px;
+      background: var(--primary);
+    }
+
+    .section-icon {
+      width: 28px;
+      height: 28px;
+      background: var(--primary-bg);
+      color: var(--primary);
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 15px;
+    }
+
+    .section-title {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--primary-dark);
+      letter-spacing: 0.5px;
+    }
+
+    /* Experience & Education Item */
+    .item-card {
+      background: #fafafa;
+      border: 1px solid #f0f0f0;
+      border-radius: 10px;
+      padding: 20px 22px;
+      transition: all 0.2s ease;
+    }
+
+    .item-card:hover {
+      background: #f8fafc;
+      border-color: #cbd5e1;
+    }
+
+    .item-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 8px;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .item-title {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .item-subtitle {
+      font-size: 15px;
+      color: var(--primary);
+      font-weight: 600;
+      margin-top: 3px;
+    }
+
+    .item-date {
+      font-size: 13.5px;
+      font-weight: 600;
+      color: #3b82f6;
+      background: #eff6ff;
+      padding: 4px 12px;
+      border-radius: 20px;
+      border: 1px solid #dbeafe;
+    }
+
+    .bullet-list {
+      list-style-type: none;
+      display: flex;
+      flex-direction: column;
+      gap: 9px;
+      margin-top: 14px;
+    }
+
+    .bullet-list li {
+      position: relative;
+      padding-left: 22px;
+      font-size: 14.5px;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    .bullet-list li::before {
+      content: '▪';
+      position: absolute;
+      left: 4px;
+      color: var(--primary-light);
+      font-size: 16px;
+      line-height: 1.2;
+    }
+
+    .bullet-list li strong {
+      color: var(--text-main);
+    }
+
+    /* Grid layout for Skills & Highlights */
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    @media (max-width: 680px) {
+      .grid-2 {
+        grid-template-columns: 1fr;
+      }
+      .resume-header, .resume-body {
+        padding: 24px 20px;
+      }
+    }
+
+    .skill-box {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 10px;
+      padding: 18px 20px;
+    }
+
+    .skill-box-title {
+      font-size: 15px;
+      font-weight: 700;
+      color: #334155;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .skill-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .tag {
+      background: #e2e8f0;
+      color: #1e293b;
+      font-size: 13px;
+      font-weight: 500;
+      padding: 4px 10px;
+      border-radius: 6px;
+    }
+
+    .tag-featured {
+      background: #dbeafe;
+      color: #1d4ed8;
+      font-weight: 600;
+      border: 1px solid #bfdbfe;
+    }
+
+    .tag-cert {
+      background: #dcfce7;
+      color: #15803d;
+      font-weight: 600;
+      border: 1px solid #bbf7d0;
+    }
+
+    /* Summary text */
+    .summary-text {
+      font-size: 15px;
+      color: #374151;
+      line-height: 1.8;
+      background: #f8fafc;
+      padding: 18px 22px;
+      border-radius: 10px;
+      border-left: 4px solid var(--primary);
+    }
+
+    /* Footer */
+    .resume-footer {
+      background: #f8fafc;
+      border-top: 1px solid var(--border);
+      padding: 16px;
+      text-align: center;
+      font-size: 13px;
+      color: #94a3b8;
+    }
+
+    /* Toast Notification */
+    #toast {
+      visibility: hidden;
+      min-width: 220px;
+      background-color: #1e293b;
+      color: #fff;
+      text-align: center;
+      border-radius: 8px;
+      padding: 12px 18px;
+      position: fixed;
+      z-index: 999;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 14px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    }
+
+    #toast.show {
+      visibility: visible;
+      animation: fadein 0.3s, fadeout 0.3s 2.2s;
+    }
+
+    @keyframes fadein {
+      from {bottom: 10px; opacity: 0;}
+      to {bottom: 30px; opacity: 1;}
+    }
+
+    @keyframes fadeout {
+      from {bottom: 30px; opacity: 1;}
+      to {bottom: 10px; opacity: 0;}
+    }
+
+    /* Print styles */
+    @media print {
+      body {
+        background: white;
+        padding: 0;
+        color: black;
+      }
+      .no-print {
+        display: none !important;
+      }
+      .container {
+        max-width: 100%;
+        margin: 0;
+      }
+      .resume-card {
+        box-shadow: none;
+        border: none;
+        border-radius: 0;
+      }
+      .resume-header {
+        background: #1e3a8a !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+        padding: 24px 30px;
+      }
+      .resume-body {
+        padding: 20px 30px;
+        gap: 20px;
+      }
+      .item-card {
+        border: 1px solid #ddd;
+        break-inside: avoid;
+        padding: 12px 15px;
+      }
+      .summary-text {
+        border-left: 4px solid #1e3a8a !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <!-- Top action bar -->
+  <div class="action-bar no-print">
+    <div class="action-title">
+      <span>📄 洪佩婷 - 線上履歷預覽與下載</span>
+    </div>
+    <div class="btn-group">
+      <button class="btn btn-secondary" onclick="copyContact()">
+        📋 複製聯絡方式
+      </button>
+      <a href="resume_peiting.docx" download="洪佩婷_個人履歷表.docx" class="btn btn-secondary" title="下載已生成的 Word 格式檔案">
+        💾 下載 Word 檔案 (.docx)
+      </a>
+      <button class="btn btn-primary" onclick="window.print()">
+        🖨️ 列印 / 另存為 PDF
+      </button>
+    </div>
+  </div>
+
+  <!-- Main resume paper -->
+  <div class="resume-card">
+    <!-- Header -->
+    <header class="resume-header">
+      <div class="header-content">
+        <div class="name-title">
+          <h1>洪佩婷</h1>
+          <div class="tagline">半導體封測技術員 · 資料處理與文書登打專員 · 生產製造助理</div>
+        </div>
+        <div class="contact-list">
+          <div class="contact-item">
+            <span>📍</span> <span>桃園市</span>
+          </div>
+          <div class="contact-item">
+            <span>📞</span> <a href="tel:0923801726">0923-801-726</a>
+          </div>
+          <div class="contact-item">
+            <span>✉️</span> <a href="mailto:peitinghh@gmail.com">peitinghh@gmail.com</a>
+          </div>
+          <div class="contact-item">
+            <span>🏆</span> <span>中打丙級證照 ｜ Excel 專業證照</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Body -->
+    <div class="resume-body">
+      <!-- Summary -->
+      <section class="section">
+        <div class="section-header">
+          <div class="section-icon">📌</div>
+          <h2 class="section-title">個人簡述與應徵亮點 (Summary)</h2>
+        </div>
+        <div class="summary-text">
+          畢業於<strong>育達高職資料處理科</strong>，並在<strong>日月光半導體累積多年技術員實務經驗</strong>。具備半導體封裝與測試設備操作、無塵室規範（Cleanroom SOP）、自主品檢（IPQC）及工單數據交接之完整歷練。同時擁有<strong>中華民國技術士中文輸入丙級證照</strong>與<strong>Excel 專業證照</strong>，具備敏捷中打速度、熟練試算表函數應用、數據整理與報表製作能力。工作態度嚴謹負責、高度重視品質細節與出勤穩定度，能靈活勝任<strong>半導體製造技術員、廠務助理、行政文書、統計分析或資料登打專員</strong>等各項職位。
+        </div>
+      </section>
+
+      <!-- Work Experience -->
+      <section class="section">
+        <div class="section-header">
+          <div class="section-icon">💼</div>
+          <h2 class="section-title">工作經歷 (Work Experience)</h2>
+        </div>
+
+        <div class="item-card">
+          <div class="item-top">
+            <div>
+              <div class="item-title">日月光半導體股份有限公司 (ASE Group)</div>
+              <div class="item-subtitle">半導體封裝與測試技術員 (Technician)</div>
+            </div>
+            <div class="item-date">2010 年 起任職</div>
+          </div>
+          <ul class="bullet-list">
+            <li><strong>產線精密機台操作與監控：</strong>負責半導體封裝／測試生產機台日常操作，落實機台每日自主點檢與製程參數監控，確保機台稼動率高且穩定運轉。</li>
+            <li><strong>嚴格落實無塵室標準規範 (SOP)：</strong>遵行無塵室作業規範與工業安全衛生（EHS）標準程序，維持良好作業環境潔淨度，達成人員與產線零工安事故。</li>
+            <li><strong>落實製程品質把關 (IPQC)：</strong>執行各道製程外觀與規格檢驗，及時挑揀不良品並向領班與工程師通報異常批次，積極協助排查原因，降低報廢損失。</li>
+            <li><strong>發揮 Excel 與資料處理專長登打生產數據：</strong>結合資料處理科背景與 Excel/中打專業證照，熟練操作廠內電腦系統（MES/ERP），即時正確登錄工單、產出產能報表與彙整日誌，實現無落差交接。</li>
+            <li><strong>重視跨班溝通與團隊協調：</strong>積極配合生產排程與產線加班調度，與不同班別同仁維持順暢交接溝通，協助團隊穩定達成各階段產能目標。</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Education -->
+      <section class="section">
+        <div class="section-header">
+          <div class="section-icon">🎓</div>
+          <h2 class="section-title">教育背景 (Education)</h2>
+        </div>
+
+        <div class="item-card">
+          <div class="item-top">
+            <div>
+              <div class="item-title">育達高級商工職業學校（育達高職）</div>
+              <div class="item-subtitle">資料處理科</div>
+            </div>
+            <div class="item-date">高職畢業</div>
+          </div>
+          <ul class="bullet-list">
+            <li><strong>核心學習領域：</strong>商業資料處理、試算表 Excel 函數應用與統計圖表、電腦文書排版、資料庫基本觀念、中文高速輸入及商業概論。</li>
+            <li><strong>實務基礎紮實：</strong>於校期間奠定優秀中打速度與電腦操作習慣，並順利考取<strong>中華民國技術士中文輸入丙級證照</strong>與<strong>Excel 專業證照</strong>。</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Skills & Certificates -->
+      <section class="section">
+        <div class="section-header">
+          <div class="section-icon">🛠️</div>
+          <h2 class="section-title">專業技能與證照 (Skills & Certifications)</h2>
+        </div>
+
+        <div class="grid-2">
+          <!-- Certifications & Computer -->
+          <div class="skill-box">
+            <div class="skill-box-title">
+              <span>📜</span> 專業證照與資訊技能
+            </div>
+            <div class="skill-tags">
+              <span class="tag tag-cert">中華民國技術士 中打丙級</span>
+              <span class="tag tag-cert">Excel 專業證照 (電子試算表)</span>
+              <span class="tag tag-featured">中文高速盲打輸入</span>
+              <span class="tag tag-featured">Excel 函數與報表分析</span>
+              <span class="tag">MS Word 文書排版</span>
+              <span class="tag">MES / ERP 產線系統登打</span>
+            </div>
+          </div>
+
+          <!-- Manufacturing & Operations -->
+          <div class="skill-box">
+            <div class="skill-box-title">
+              <span>⚙️</span> 半導體與產線技術
+            </div>
+            <div class="skill-tags">
+              <span class="tag tag-featured">半導體封裝與測試設備</span>
+              <span class="tag">無塵室作業規範 (SOP)</span>
+              <span class="tag">機台日常保養點檢</span>
+              <span class="tag">製程品管與瑕疵檢驗 (IPQC)</span>
+              <span class="tag">工安衛生守則 (EHS)</span>
+            </div>
+          </div>
+
+          <!-- Soft Skills -->
+          <div class="skill-box">
+            <div class="skill-box-title">
+              <span>🤝</span> 團隊工作軟實力
+            </div>
+            <div class="skill-tags">
+              <span class="tag tag-featured">極佳穩定度與耐心</span>
+              <span class="tag">細心嚴謹、注重品質</span>
+              <span class="tag">跨班交接與溝通協調</span>
+              <span class="tag">抗壓性高、配合度好</span>
+            </div>
+          </div>
+
+          <!-- Target Fit -->
+          <div class="skill-box">
+            <div class="skill-box-title">
+              <span>🎯</span> 適任職缺方向
+            </div>
+            <div class="skill-tags">
+              <span class="tag tag-featured">半導體封測技術員</span>
+              <span class="tag tag-featured">生產助理 / 廠務助理</span>
+              <span class="tag tag-featured">資料處理員 / 行政助理</span>
+              <span class="tag">品質檢驗員 (QC)</span>
+              <span class="tag">報表登打與庫存盤點專員</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Key Strengths -->
+      <section class="section">
+        <div class="section-header">
+          <div class="section-icon">🌟</div>
+          <h2 class="section-title">核心優勢與工作態度 (Strengths & Work Ethic)</h2>
+        </div>
+        <div class="summary-text" style="border-left-color: #059669;">
+          <ul style="list-style-type: disc; padding-left: 20px; display: flex; flex-direction: column; gap: 8px;">
+            <li><strong>科技大廠扎實資歷，穩定性高：</strong>在日月光半導體任職多年，習慣半導體產業的紀律與作業節奏，出勤穩定、抗壓性強，能迅速配合產線排程與主管交辦任務。</li>
+            <li><strong>雙證照加持，數據登打與報表能力強：</strong>持有「中打丙級」與「Excel 專業證照」，在各類生產日報、工單登打、庫存盤點與異常追蹤表單製作上，能展現高效率與高精確度。</li>
+            <li><strong>嚴謹品管態度與良好團隊溝通：</strong>作業細心負責，重視每個批次的產出品質與工安標準，能與前後製程及跨班同仁良好協作。</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="resume-footer">
+      洪佩婷 個人履歷表 · 支援瀏覽器直接列印為標準 A4 PDF 或下載 Word 文件進行編輯
+    </footer>
+  </div>
+</div>
+
+<div id="toast">已複製聯絡方式！</div>
+
+<script>
+  function copyContact() {
+    const text = "姓名：洪佩婷\n電話：0923801726\nEmail：peitinghh@gmail.com\n地區：桃園市\n證照：中打丙級、Excel 專業證照";
+    navigator.clipboard.writeText(text).then(() => {
+      showToast('已複製聯絡資訊！');
+    }).catch(err => {
+      alert(text);
+    });
+  }
+
+  function showToast(msg) {
+    const toast = document.getElementById('toast');
+    toast.innerText = msg;
+    toast.className = 'show';
+    setTimeout(() => {
+      toast.className = toast.className.replace('show', '');
+    }, 2500);
+  }
+</script>
+
+</body>
+</html>
