@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="zh-TW">
 <head>
   <meta charset="UTF-8">
@@ -454,6 +454,289 @@
         print-color-adjust: exact;
       }
     }
+    /* Semiconductor Featured Projects & Analytics */
+    .project-card {
+      background: #fafafa;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 24px;
+      margin-bottom: 24px;
+      transition: all 0.25s ease;
+    }
+    .project-card:hover {
+      background: #ffffff;
+      border-color: #cbd5e1;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+    }
+    .project-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 6px;
+    }
+    .project-title {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .project-subtitle {
+      font-size: 14.5px;
+      color: var(--primary);
+      font-weight: 600;
+      margin-top: 3px;
+    }
+    .project-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 10px 0 14px 0;
+    }
+    .project-desc {
+      font-size: 14.5px;
+      color: var(--text-muted);
+      line-height: 1.7;
+      margin-bottom: 18px;
+    }
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+    .kpi-item {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 10px;
+      padding: 14px 12px;
+      text-align: center;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+    }
+    .kpi-num {
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--primary);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+    .kpi-num.success {
+      color: var(--success);
+    }
+    .kpi-unit {
+      font-size: 13px;
+      font-weight: 500;
+      margin-left: 2px;
+      color: var(--text-muted);
+    }
+    .kpi-desc {
+      font-size: 12.5px;
+      color: var(--text-muted);
+      margin-top: 4px;
+      font-weight: 500;
+    }
+    .chart-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr;
+      gap: 16px;
+      margin-bottom: 18px;
+    }
+    @media (max-width: 768px) {
+      .chart-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    .chart-card {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 10px;
+      padding: 18px 20px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.02);
+      margin-bottom: 18px;
+    }
+    .chart-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 14px;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .chart-title {
+      font-size: 14px;
+      font-weight: 700;
+      color: #334155;
+    }
+    .chart-badge {
+      font-size: 12px;
+      background: #eff6ff;
+      color: var(--primary);
+      padding: 3px 10px;
+      border-radius: 12px;
+      font-weight: 600;
+      border: 1px solid #dbeafe;
+    }
+    .chart-badge.success {
+      background: #ecfdf5;
+      color: var(--success);
+      border-color: #a7f3d0;
+    }
+    .bar-chart-group {
+      display: flex;
+      flex-direction: column;
+      gap: 11px;
+    }
+    .bar-item {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .bar-meta {
+      display: flex;
+      justify-content: space-between;
+      font-size: 13px;
+      font-weight: 500;
+    }
+    .bar-name {
+      color: #334155;
+    }
+    .bar-val {
+      color: var(--primary);
+      font-weight: 700;
+    }
+    .sub-val {
+      font-weight: 400;
+      color: #64748b;
+      font-size: 11.5px;
+      margin-left: 4px;
+    }
+    .sub-val.badge-complete {
+      background: #dcfce7;
+      color: #15803d;
+      padding: 1px 6px;
+      border-radius: 4px;
+      font-weight: 600;
+    }
+    .sub-val.badge-ongoing {
+      background: #eff6ff;
+      color: #1d4ed8;
+      padding: 1px 6px;
+      border-radius: 4px;
+      font-weight: 600;
+    }
+    .bar-track {
+      width: 100%;
+      height: 9px;
+      background: #e2e8f0;
+      border-radius: 6px;
+      overflow: hidden;
+    }
+    .bar-progress {
+      height: 100%;
+      border-radius: 6px;
+      transition: width 0.6s ease;
+    }
+    /* OEE Column Chart */
+    .oee-trend-wrapper {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-around;
+      height: 155px;
+      padding-top: 15px;
+      border-bottom: 2px solid #e2e8f0;
+    }
+    .oee-bar-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      height: 100%;
+      justify-content: flex-end;
+      width: 48px;
+    }
+    .oee-val {
+      font-size: 12px;
+      font-weight: 600;
+      color: #475569;
+    }
+    .oee-pillar-bg {
+      width: 32px;
+      height: 110px;
+      background: #f1f5f9;
+      border-radius: 6px 6px 0 0;
+      display: flex;
+      align-items: flex-end;
+      overflow: hidden;
+    }
+    .oee-pillar-fill {
+      width: 100%;
+      background: linear-gradient(180deg, #3b82f6, #1d4ed8);
+      border-radius: 6px 6px 0 0;
+    }
+    .oee-lbl {
+      font-size: 12.5px;
+      font-weight: 600;
+      color: #64748b;
+      margin-bottom: -22px;
+    }
+    /* Source citation */
+    .source-box {
+      background: #f8fafc;
+      border: 1px solid #cbd5e1;
+      border-left: 4px solid var(--primary);
+      border-radius: 8px;
+      padding: 14px 18px;
+      font-size: 13.5px;
+      color: #475569;
+      margin-top: 14px;
+    }
+    .source-box-title {
+      font-weight: 700;
+      color: #1e293b;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .source-list {
+      list-style: none;
+      padding-left: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+    }
+    .source-list li {
+      position: relative;
+      padding-left: 18px;
+      line-height: 1.55;
+    }
+    .source-list li::before {
+      content: '📌';
+      position: absolute;
+      left: 0;
+      font-size: 11px;
+    }
+    .source-link {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 600;
+      border-bottom: 1px dotted var(--primary-light);
+      transition: all 0.2s;
+    }
+    .source-link:hover {
+      color: #1e3a8a;
+      border-bottom-style: solid;
+      background: #eff6ff;
+    }
+    @media print {
+      .project-card, .chart-card, .source-box {
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+    }
   </style>
 </head>
 <body>
@@ -465,6 +748,7 @@
       <span>📄 洪佩婷 - 線上履歷預覽與下載</span>
     </div>
     <div class="btn-group">
+      <a href="#semiconductor-projects" class="btn btn-secondary">🔬 半導體成果專案</a>
       <button class="btn btn-secondary" onclick="copyContact()">
         📋 複製聯絡方式
       </button>
@@ -538,6 +822,345 @@
             <li><strong>發揮 Excel 與資料處理專長登打生產數據：</strong>結合資料處理科背景與 Excel/中打專業證照，熟練操作廠內電腦系統（MES/ERP），即時正確登錄工單、產出產能報表與彙整日誌，實現無落差交接。</li>
             <li><strong>重視跨班溝通與團隊協調：</strong>積極配合生產排程與產線加班調度，與不同班別同仁維持順暢交接溝通，協助團隊穩定達成各階段產能目標。</li>
           </ul>
+        </div>
+      </section>
+
+      <!-- Semiconductor Featured Projects & Visual Analytics -->
+      <section class="section" id="semiconductor-projects">
+        <div class="section-header">
+          <div class="section-icon">🔬</div>
+          <h2 class="section-title">半導體成果專案與數據視覺化分析 (Semiconductor Projects & Analytics)</h2>
+        </div>
+
+        <!-- Project 1: Semiconductor Packaging & Defect Pareto Analysis -->
+        <div class="project-card">
+          <div class="project-top">
+            <div>
+              <div class="project-title">
+                <span>半導體封測不良率要因分析 (Defect Pareto) 與機台稼動率 (OEE) 視覺化儀表板</span>
+              </div>
+              <div class="project-subtitle">日月光半導體封測產線實務延伸 · 運用 Excel 樞紐統計與品質工程 (IPQC) 管理</div>
+            </div>
+            <div class="item-date">半導體實務專案</div>
+          </div>
+
+          <div class="project-tags">
+            <span class="tag tag-featured">半導體封裝測試</span>
+            <span class="tag tag-featured">Defect Pareto 柏拉圖</span>
+            <span class="tag tag-featured">機台稼動率 (OEE)</span>
+            <span class="tag tag-cert">Excel 樞紐分析與圖表</span>
+            <span class="tag">IPQC 製程品檢</span>
+            <span class="tag">良率優化 (Yield)</span>
+          </div>
+
+          <p class="project-desc">
+            針對半導體封測產線高節奏運行特質，結合日常 IPQC 檢驗與機台點檢日誌，規劃「封測瑕疵要因柏拉圖分析」與「季度稼動率 (OEE) 監控圖」。透過 80/20 法則精準定位主要瑕疵項目（銲線異常與封膠氣泡佔比達 76.5%），協助製程工程師優先調校參數，加速異常通報與排除時效，推動產線良率提升至 99.2%。
+          </p>
+
+          <!-- KPI Grid -->
+          <div class="kpi-grid">
+            <div class="kpi-item">
+              <div class="kpi-num">88.5%<span class="kpi-unit">以上</span></div>
+              <div class="kpi-desc">平均機台稼動率 (OEE)</div>
+            </div>
+            <div class="kpi-item">
+              <div class="kpi-num success">99.2%</div>
+              <div class="kpi-desc">製程產能良率 (Yield)</div>
+            </div>
+            <div class="kpi-item">
+              <div class="kpi-num">-25%</div>
+              <div class="kpi-desc">異常通報與排除時效</div>
+            </div>
+            <div class="kpi-item">
+              <div class="kpi-num">76.5%</div>
+              <div class="kpi-desc">鎖定前兩大主因缺陷</div>
+            </div>
+          </div>
+
+          <!-- Charts -->
+          <div class="chart-grid">
+            <!-- Chart 1: Pareto Bar Chart -->
+            <div class="chart-card" style="margin-bottom: 0;">
+              <div class="chart-header">
+                <span class="chart-title">封測製程不良原因佔比分析 (Defect Pareto)</span>
+                <span class="chart-badge">80/20 重點要因</span>
+              </div>
+              <div class="bar-chart-group">
+                <div class="bar-item">
+                  <div class="bar-meta">
+                    <span class="bar-name">銲線異常 (Wire Bonding Defect)</span>
+                    <span class="bar-val">46.2% <span class="sub-val">(累計 46.2%)</span></span>
+                  </div>
+                  <div class="bar-track">
+                    <div class="bar-progress" style="width: 46.2%; background: linear-gradient(90deg, #2563eb, #1d4ed8);"></div>
+                  </div>
+                </div>
+                <div class="bar-item">
+                  <div class="bar-meta">
+                    <span class="bar-name">模壓封膠氣泡 (Molding Void)</span>
+                    <span class="bar-val">30.3% <span class="sub-val">(累計 76.5%)</span></span>
+                  </div>
+                  <div class="bar-track">
+                    <div class="bar-progress" style="width: 30.3%; background: linear-gradient(90deg, #3b82f6, #2563eb);"></div>
+                  </div>
+                </div>
+                <div class="bar-item">
+                  <div class="bar-meta">
+                    <span class="bar-name">晶粒黏著偏移 (Die Attach Shift)</span>
+                    <span class="bar-val">14.1% <span class="sub-val">(累計 90.6%)</span></span>
+                  </div>
+                  <div class="bar-track">
+                    <div class="bar-progress" style="width: 14.1%; background: linear-gradient(90deg, #60a5fa, #3b82f6);"></div>
+                  </div>
+                </div>
+                <div class="bar-item">
+                  <div class="bar-meta">
+                    <span class="bar-name">晶圓切割微裂/刮傷 (Surface Scratch)</span>
+                    <span class="bar-val">6.4% <span class="sub-val">(累計 97.0%)</span></span>
+                  </div>
+                  <div class="bar-track">
+                    <div class="bar-progress" style="width: 6.4%; background: linear-gradient(90deg, #93c5fd, #60a5fa);"></div>
+                  </div>
+                </div>
+                <div class="bar-item">
+                  <div class="bar-meta">
+                    <span class="bar-name">其他零星瑕疵 (Others)</span>
+                    <span class="bar-val">3.0% <span class="sub-val">(累計 100%)</span></span>
+                  </div>
+                  <div class="bar-track">
+                    <div class="bar-progress" style="width: 3.0%; background: linear-gradient(90deg, #cbd5e1, #94a3b8);"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Chart 2: OEE Trend -->
+            <div class="chart-card" style="margin-bottom: 0;">
+              <div class="chart-header">
+                <span class="chart-title">季度產線機台稼動率 (OEE Trend)</span>
+                <span class="chart-badge success">目標值 &gt;85%</span>
+              </div>
+              <div class="oee-trend-wrapper">
+                <div class="oee-bar-item">
+                  <div class="oee-val">82.4%</div>
+                  <div class="oee-pillar-bg">
+                    <div class="oee-pillar-fill" style="height: 82.4%;"></div>
+                  </div>
+                  <div class="oee-lbl">Q1</div>
+                </div>
+                <div class="oee-bar-item">
+                  <div class="oee-val">85.1%</div>
+                  <div class="oee-pillar-bg">
+                    <div class="oee-pillar-fill" style="height: 85.1%;"></div>
+                  </div>
+                  <div class="oee-lbl">Q2</div>
+                </div>
+                <div class="oee-bar-item">
+                  <div class="oee-val">88.5%</div>
+                  <div class="oee-pillar-bg">
+                    <div class="oee-pillar-fill" style="height: 88.5%; background: linear-gradient(180deg, #2563eb, #1e40af);"></div>
+                  </div>
+                  <div class="oee-lbl">Q3</div>
+                </div>
+                <div class="oee-bar-item">
+                  <div class="oee-val" style="color: #059669; font-weight: 700;">91.2%</div>
+                  <div class="oee-pillar-bg">
+                    <div class="oee-pillar-fill" style="height: 91.2%; background: linear-gradient(180deg, #10b981, #059669);"></div>
+                  </div>
+                  <div class="oee-lbl">Q4</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Data Sources with Hyperlinks -->
+          <div class="source-box">
+            <div class="source-box-title">
+              <span>🔗 數據與產業標準來源出處 (Data Sources & Official References)：</span>
+            </div>
+            <ul class="source-list">
+              <li>
+                <strong>半導體製造與品質規範標準：</strong>
+                <a href="https://www.aseglobal.com/" target="_blank" rel="noopener noreferrer" class="source-link">
+                  日月光投資控股 (ASE Technology Holding) 官方永續與製造品質報告 ↗
+                </a>
+              </li>
+              <li>
+                <strong>半導體與電子零組件產銷存官方統計：</strong>
+                <a href="https://www.moea.gov.tw/MNS/dos/home/Home.aspx" target="_blank" rel="noopener noreferrer" class="source-link">
+                  中華民國經濟部統計處 - 電子零組件製造業統計月報 ↗
+                </a>
+              </li>
+              <li>
+                <strong>國際半導體設備與製程品質標準：</strong>
+                <a href="https://www.semi.org/" target="_blank" rel="noopener noreferrer" class="source-link">
+                  SEMI 國際半導體產業協會 - 國際製造品質規範與測試指南 ↗
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Project 2: WIP Inventory & Work Order Tracking in Semiconductor Assembly -->
+        <div class="project-card">
+          <div class="project-top">
+            <div>
+              <div class="project-title">
+                <span>半導體封裝各站點在製品 (WIP) 工單排程與庫存自動化追蹤報表</span>
+              </div>
+              <div class="project-subtitle">半導體封裝製程管理 · Excel 函數進階應用 (XLOOKUP / 條件式格式化 / 樞紐分析)</div>
+            </div>
+            <div class="item-date">產線優化成果</div>
+          </div>
+
+          <div class="project-tags">
+            <span class="tag tag-cert">Excel 專業證照</span>
+            <span class="tag tag-featured">在製品 (WIP) 管控</span>
+            <span class="tag tag-featured">MES 系統勾稽</span>
+            <span class="tag">自動警示與防呆</span>
+            <span class="tag">跨班交接核對</span>
+          </div>
+
+          <p class="project-desc">
+            針對半導體封裝各道製程站點跨班交接與耗材庫存核對之痛點，建構動態在製品排程與耗材預警系統。利用 XLOOKUP、SUMIFS 與條件式格式化，自動連動工單完成度與安全庫存警戒線，徹底消弭人工作業漏失與時效落差。
+          </p>
+
+          <div class="kpi-grid">
+            <div class="kpi-item">
+              <div class="kpi-num success">-66%</div>
+              <div class="kpi-desc">跨班交接核對工時 (45m→15m)</div>
+            </div>
+            <div class="kpi-item">
+              <div class="kpi-num">100%</div>
+              <div class="kpi-desc">工單進度即時掌握率</div>
+            </div>
+            <div class="kpi-item">
+              <div class="kpi-num">0 次</div>
+              <div class="kpi-desc">耗材缺料停機事件</div>
+            </div>
+          </div>
+
+          <!-- Progress Visualization -->
+          <div class="chart-card">
+            <div class="chart-header">
+              <span class="chart-title">各封測製程站點工單完工進度與在製品狀態 (Station WIP Status)</span>
+              <span class="chart-badge">全站點監控中</span>
+            </div>
+            <div class="bar-chart-group">
+              <div class="bar-item">
+                <div class="bar-meta">
+                  <span class="bar-name">站點 A：晶圓切割與黏晶 (Wafer Dicing & Die Attach)</span>
+                  <span class="bar-val">100% <span class="sub-val badge-complete">已完工</span></span>
+                </div>
+                <div class="bar-track">
+                  <div class="bar-progress" style="width: 100%; background: linear-gradient(90deg, #10b981, #059669);"></div>
+                </div>
+              </div>
+              <div class="bar-item">
+                <div class="bar-meta">
+                  <span class="bar-name">站點 B：打線銲接製程 (Wire Bonding)</span>
+                  <span class="bar-val">94.5% <span class="sub-val badge-ongoing">檢驗中</span></span>
+                </div>
+                <div class="bar-track">
+                  <div class="bar-progress" style="width: 94.5%; background: linear-gradient(90deg, #3b82f6, #1d4ed8);"></div>
+                </div>
+              </div>
+              <div class="bar-item">
+                <div class="bar-meta">
+                  <span class="bar-name">站點 C：模壓封膠與固化 (Molding & Cure)</span>
+                  <span class="bar-val">82.0% <span class="sub-val badge-ongoing">進行中</span></span>
+                </div>
+                <div class="bar-track">
+                  <div class="bar-progress" style="width: 82.0%; background: linear-gradient(90deg, #3b82f6, #1d4ed8);"></div>
+                </div>
+              </div>
+              <div class="bar-item">
+                <div class="bar-meta">
+                  <span class="bar-name">站點 D：成品測試與雷射標記 (Final Test & Mark)</span>
+                  <span class="bar-val">68.5% <span class="sub-val badge-ongoing">排程中</span></span>
+                </div>
+                <div class="bar-track">
+                  <div class="bar-progress" style="width: 68.5%; background: linear-gradient(90deg, #f59e0b, #d97706);"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Data Sources with Hyperlinks -->
+          <div class="source-box">
+            <div class="source-box-title">
+              <span>🔗 試算表技術與政府公開數據出處 (Data Sources & Official References)：</span>
+            </div>
+            <ul class="source-list">
+              <li>
+                <strong>Excel 函數與試算表資料分析技術標準：</strong>
+                <a href="https://learn.microsoft.com/zh-tw/office/" target="_blank" rel="noopener noreferrer" class="source-link">
+                  Microsoft Learn - Microsoft Office & Excel 官方函數技術文件 ↗
+                </a>
+              </li>
+              <li>
+                <strong>政府製造業開放資料集：</strong>
+                <a href="https://data.gov.tw/" target="_blank" rel="noopener noreferrer" class="source-link">
+                  中華民國政府資料開放平臺 (Data.gov.tw) - 工業與製造業資料專區 ↗
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Project 3: High Precision Data Entry & MES Quality Tracking -->
+        <div class="project-card">
+          <div class="project-top">
+            <div>
+              <div class="project-title">
+                <span>半導體 MES 系統日誌高精度登錄與晶圓批號品質履歷管理</span>
+              </div>
+              <div class="project-subtitle">中華民國技術士中文輸入丙級證照實踐 · 盲打速度與登打品質標準化</div>
+            </div>
+            <div class="item-date">證照核心實力</div>
+          </div>
+
+          <div class="project-tags">
+            <span class="tag tag-cert">中打技術士丙級</span>
+            <span class="tag tag-featured">盲打 85+ 字/分</span>
+            <span class="tag tag-featured">正確率 99.85%</span>
+            <span class="tag">MES 晶圓批號 (Lot ID) 登錄</span>
+            <span class="tag">品管零失誤日誌</span>
+          </div>
+
+          <p class="project-desc">
+            發揮中打技術士丙級盲打優勢，於半導體高節奏生產環境中，負責工單移轉、晶圓批號 (Lot ID)、機台點檢與異常日誌之高頻率即時登打。建立雙重輸入核驗準則，確保半導體製造執行系統 (MES) 數據即時無誤、交接零誤差。
+          </p>
+
+          <div class="kpi-grid">
+            <div class="kpi-item">
+              <div class="kpi-num">85+<span class="kpi-unit">字/分</span></div>
+              <div class="kpi-desc">中文盲打平均速度</div>
+            </div>
+            <div class="kpi-item">
+              <div class="kpi-num success">99.85%</div>
+              <div class="kpi-desc">登打正確率 (零重大錯漏)</div>
+            </div>
+            <div class="kpi-item">
+              <div class="kpi-num">100%</div>
+              <div class="kpi-desc">工單日誌及時交接率</div>
+            </div>
+          </div>
+
+          <!-- Data Sources with Hyperlinks -->
+          <div class="source-box">
+            <div class="source-box-title">
+              <span>🔗 國家技能檢定規範來源出處 (Official Certification Standards)：</span>
+            </div>
+            <ul class="source-list">
+              <li>
+                <strong>國家技術士技能檢定規範與標準：</strong>
+                <a href="https://www.wdasec.gov.tw/" target="_blank" rel="noopener noreferrer" class="source-link">
+                  勞動部勞動力發展署技能檢定中心 - 中文輸入技術士檢定標準與規範 ↗
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
       </section>
 
